@@ -1,0 +1,18 @@
+development:
+    adapter: mysql2
+    encoding: utf8
+    username: root
+    password: 
+    database: balder_dev
+test:
+    adapter: mysql2
+    encoding: utf8
+    username: root
+    password: 
+    database: balder_test
+production:
+    adapter: mysql2
+    encoding: utf8
+    username: root
+    password: 
+    database: balder_prod
