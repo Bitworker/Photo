@@ -19,7 +19,7 @@
 <p><%= @album.description %></p>
 
 <% unless @album.photo_tags.empty? %>
-<p>Tagged with: 
+<p>Getaggt mit: 
 <% for tag in @album.photo_tags.map{|tag|tag.title}.sort %>
 <%= link_to tag, album_tag_photos_path(@album, tag) %>
 <% end %>
@@ -33,7 +33,6 @@
 <% end %>
 </p>
 <% end %>
-
 
 <% if has_role?("admin") %>
 <p><%= @album.address %></p>
@@ -49,16 +48,16 @@
 <% if has_role?("admin") %>
 <% if params[:collection_id] %>
 <%= link_to "PDF", collection_album_path(params[:collection_id],@album, :format => 'pdf') %> |&nbsp;
-<%= link_to "Edit album", edit_collection_album_path(params[:collection_id],@album) %> |&nbsp;
-<%= link_to "Edit all photos", edit_multiple_collection_album_photos_path(params[:collection_id],@album) %> |&nbsp;
-<%= link_to "Edit untouched photos", untouched_collection_album_photos_path(params[:collection_id], @album) %> |&nbsp;
-<%= link_to "Add photos", upload_collection_album_photos_path(params[:collection_id], @album) %>
+<%= link_to "Album bearbeiten", edit_collection_album_path(params[:collection_id],@album) %> |&nbsp;
+<%= link_to "Alle Fotos Bearbeiten", edit_multiple_collection_album_photos_path(params[:collection_id],@album) %> |&nbsp;
+<%= link_to "Unfertige Fotos Bearbeiten", untouched_collection_album_photos_path(params[:collection_id], @album) %> |&nbsp;
+<%= link_to "Foto hinzufügen", upload_collection_album_photos_path(params[:collection_id], @album) %>
 <% else %>
 <%= link_to "PDF", album_path(@album, :format => 'pdf') %> |&nbsp;
-<%= link_to "Edit album", edit_album_path(@album) %> |&nbsp;
-<%= link_to "Edit all photos", edit_multiple_album_photos_path(@album) %> |&nbsp;
-<%= link_to "Edit untouched photos", untouched_album_photos_path(@album) %> |&nbsp;
-<%= link_to "Add photos", upload_album_photos_path(@album) %>
+<%= link_to "Album bearbeiten", edit_album_path(@album) %> |&nbsp;
+<%= link_to "Alle Fotos Bearbeiten", edit_multiple_album_photos_path(@album) %> |&nbsp;
+<%= link_to "Unfertige Fotos Bearbeiten", untouched_album_photos_path(@album) %> |&nbsp;
+<%= link_to "Foto hinzufügen", upload_album_photos_path(@album) %>
 <% end %>
 
 <% end %>

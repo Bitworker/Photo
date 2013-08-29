@@ -1,4 +1,4 @@
-<h1>Edit Album</h1>
+<h1>Album Bearbeiten</h1>
  
 <%= form_for @album do |f| %>
   <%= f.error_messages %>
@@ -6,7 +6,6 @@
   <%= f.submit "Speichern" %>
 <% end %>
  
-
 <%= content_for :action_links do %>
 <% if has_role?("admin") %>
 

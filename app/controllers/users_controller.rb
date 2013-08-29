@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       if User.all.length == 1
         @user.roles << Role.create(:name => 'admin')
       end
-      flash[:notice] = "Account registered!"
+      flash[:notice] = "Account registriert"
       redirect_back_or_default new_collection_path
     else
       render :action => :new
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
   def update
     @user = @current_user # makes our views "cleaner" and more consistent
     if @user.update_attributes(params[:user])
-      flash[:notice] = "Account updated!"
+      flash[:notice] = "Account bearbeitet"
       redirect_to account_path
     else
       render :action => :edit

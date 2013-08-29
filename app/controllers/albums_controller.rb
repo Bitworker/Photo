@@ -57,7 +57,7 @@ class AlbumsController < ApplicationController
     @album = Album.new(params[:album])
 
     if @album.save
-      flash[:notice] = "Album created! Now add some nice photos."
+      flash[:notice] = "Album erstellt! Füge jetzt gute Fotos hinzu"
       if params[:collection_id]
         @album.collections << Collection.find( params[:collection_id] )
         redirect_to upload_collection_album_photos_path(params[:collection_id], @album )
@@ -76,7 +76,7 @@ class AlbumsController < ApplicationController
   def update
     @album = Album.find( params[:id])
     if @album.update_attributes(params[:album])
-      flash[:notice] = "Album updated!"
+      flash[:notice] = "Album bearbeitet"
       if params[:collection_id]
         redirect_to collection_album_path(params[:collection_id], @album )
       else

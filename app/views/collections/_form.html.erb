@@ -1,4 +1,4 @@
-<%= form.label :title, :Title, {:class => 'big'} %><br />
+<%= form.label :title, {:class => 'big'} %><br />
 <%= form.text_field :title, {:class => 'big'} %><br />
 
 <%= form.label :description %><br />
@@ -26,9 +26,9 @@
 <p class="clear">
 <%
 grouped_options = [
-	['Available albums',[['Choose album to add','']]],
-	['Not used', Album.unused.map{|album|[album.title, album.id]} ],
-	['In use', Album.used.map{|album|[album.title, album.id]} ]
+	['Verfügbare Alben',[['Wähle ein Album','']]],
+	['Nicht in Benutzung', Album.unused.map{|album|[album.title, album.id]} ],
+	['In Benutzung', Album.used.map{|album|[album.title, album.id]} ]
 ]
 grouped_options_for_select(grouped_options)
 %>

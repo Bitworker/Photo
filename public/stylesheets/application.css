@@ -74,7 +74,11 @@ caption {background:#eee;}
 	clear:  both;
 }
 
-
+div.logged_in {
+  position: relative;
+  float: right;
+  right: 13px;
+}
 
 /* @end */
 
@@ -86,7 +90,7 @@ caption {background:#eee;}
 div#header h1 {
 	text-transform: uppercase;
 	font-weight: bold;
-	letter-spacing: 10px;
+	letter-spacing: 5px;
 	margin: 10px 0 0 0;
 	float: left;
 	clear: left;
@@ -227,6 +231,11 @@ DIV#breadcrumb {
 DIV#action_links {
     float: right;
     clear: right;
+}
+
+div#action_links h6 {
+	float: left;
+	margin-top: 17px;
 }
 
 td {

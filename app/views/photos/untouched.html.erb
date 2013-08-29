@@ -1,5 +1,6 @@
 <%= form_for :photos, :url => update_multiple_photos_path, :html => { :method => :put } do |f| %>
 <% for photo in @photos %>
+Bitte gib Titel und Tags an
 <p>
 <%= f.fields_for photo do |p|%>
 	<%= render :partial => "photos/thumb", :locals => {:photo => photo } %>
@@ -8,5 +9,5 @@
 <% end%>
 </p>
 <% end%>
-  <p><%= f.submit "Submit" %></p>
+  <p><%= f.submit "Speichern" %></p>
 <% end %>

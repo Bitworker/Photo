@@ -1,10 +1,10 @@
-<%= form.label :name, 'Display name' %><br />
+<%= form.label :name, 'Benutzername' %><br />
 <%= form.text_field :name %><br />
 <br />
 <%= form.label :email %><br />
 <%= form.text_field :email %><br />
 <br />
-<%= form.label :password, form.object.new_record? ? nil : "Change password" %><br />
+<%= form.label :password, form.object.new_record? ? nil : "Passwort ändern" %><br />
 <%= form.password_field :password %><br />
 <br />
 <%= form.label :password_confirmation %><br />

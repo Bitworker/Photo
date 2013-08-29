@@ -1,13 +1,13 @@
-<h1>Edit collection</h1>
+<h1>Zusammenstellung Bearbeiten</h1>
  
 <%= form_for @collection do |f| %>
   <%= f.error_messages %>
   <%= render :partial => "form", :object => f %>
-  <%= f.submit "Update" %>
+  <%= f.submit "Speichern" %>
 <% end %>
 
 <%= content_for :action_links do %>
-<%= link_to("Delete this collection", { :action => "destroy", :id => @collection },
-  :confirm => "Are you sure you want to delete this collection?",
+<%= link_to("Diese Zusammenstellung löschnen", { :action => "destroy", :id => @collection },
+  :confirm => "Bist du sicher das du diese Zusammenstellung löschen möchtest?",
   :method => :delete) %>
 <% end %>

@@ -33,7 +33,7 @@ class ApplicationController < ActionController::Base
     def require_role(roles = [])
       unless current_user && current_user.in_role?(*roles)
         store_location
-        flash[:notice] = "You must have permission to access this page"
+        flash[:notice] = "Du musst die Berechtigungen haben um diese Seite zu sehen"
         redirect_to account_path
         return false
       end
@@ -49,7 +49,7 @@ class ApplicationController < ActionController::Base
       return false if !require_user
       unless current_user && current_user.has_permission?(*permissions)
         store_location
-        flash[:notice] = "You must have permission to access this page"
+        flash[:notice] = "Du musst die Berechtigungen haben um diese Seite zu sehen"
         redirect_to account_path
         return false
       end
@@ -59,7 +59,7 @@ class ApplicationController < ActionController::Base
     def require_user
       unless current_user
         store_location
-        flash[:notice] = "You must be logged in to access this page"
+        flash[:notice] = "Du musst eingeloggt sein um diese Seite zu sehen"
         redirect_to login_path
         return false
       end
@@ -69,7 +69,7 @@ class ApplicationController < ActionController::Base
     def require_no_user
       if current_user
         store_location
-        flash[:notice] = "Already logged in. Please logout"
+        flash[:notice] = "Du bist bereichts eingeloggt. Bitte ausloggen"
         redirect_to account_path
         return false
       end

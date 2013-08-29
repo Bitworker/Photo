@@ -8,38 +8,36 @@
   <%=h @user.email %>
 </p>
 
-
 <p>
-  <b>Login count:</b>
+  <b>Login anzahl:</b>
   <%=h @user.login_count %>
 </p>
  
 <p>
-  <b>Last request at:</b>
+  <b>Letzte anfrage um:</b>
   <%=h @user.last_request_at %>
 </p>
  
 <p>
-  <b>Last login at:</b>
+  <b>Letzter Login um:</b>
   <%=h @user.last_login_at %>
 </p>
  
 <p>
-  <b>Current login at:</b>
+  <b>Aktueller Login um:</b>
   <%=h @user.current_login_at %>
 </p>
  
 <p>
-  <b>Last login ip:</b>
+  <b>Letzte Login ip:</b>
   <%=h @user.last_login_ip %>
 </p>
  
 <p>
-  <b>Current login ip:</b>
+  <b>Aktuelle Login ip:</b>
   <%=h @user.current_login_ip %>
 </p>
  
-
 <%= content_for :action_links do %>
-<%= link_to 'Edit', edit_user_path(@user) %>
+<%= link_to 'Bearbeiten', edit_user_path(@user) %>
 <% end %>

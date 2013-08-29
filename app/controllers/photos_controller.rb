@@ -106,7 +106,7 @@ class PhotosController < ApplicationController
   def update
     @photo = Photo.find( params[:id])
     if @photo.update_attributes(params[:photo])
-      flash[:notice] = "Photo updated!"
+      flash[:notice] = "Photo bearbeitet"
       if params[:collection_id]
         redirect_to collection_album_photo_path( params[:collection_id], params[:album_id], @photo )
       elsif params[:album_id]
@@ -131,7 +131,7 @@ class PhotosController < ApplicationController
         photo.save
       end
     end
-    flash[:notice] = "Updated photos!"
+    flash[:notice] = "Fotos bearbeitet"
     redirect_to photos_path
   end
   
