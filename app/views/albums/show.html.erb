@@ -27,7 +27,7 @@
 <% end %>
 
 <% unless @album.collections.empty? %>
-<p>Part of: 
+<p>Gehört zu: 
 <% for collection in @album.collections.find(:all, :order => 'title') %>
 <%= link_to collection.title, collection_path(collection) %>
 <% end %>
