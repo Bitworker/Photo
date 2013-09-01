@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class PhotosController < ApplicationController
   before_filter :check_public_access
   before_filter :require_role_admin, :only => [:untouched, :upload, :new, :create, :edit, :update, :destroy, :scan]

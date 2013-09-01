@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class UsersController < ApplicationController
   before_filter :check_public_access
   before_filter :require_no_user, :only => [:new, :create]

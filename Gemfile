@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 source 'http://rubygems.org'
 
 gem 'rails', '3.2.12'

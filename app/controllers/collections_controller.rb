@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 class CollectionsController < ApplicationController
   before_filter :check_public_access
   before_filter :require_role_admin, :only => [:new, :create, :edit, :update, :destroy]
